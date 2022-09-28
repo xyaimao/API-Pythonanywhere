@@ -83,7 +83,7 @@ def retrain():
 
     model = pickle.load(open('advertising_model','rb'))
     model.fit(X,y)
-    pickle.dump(model, open('API-Pythonanywhere/advertising_model_v1','wb'))
+    pickle.dump(model, open('advertising_model_v1','wb'))
 
     scores = cross_val_score(model, X, y, cv=10, scoring='neg_mean_absolute_error')
 
