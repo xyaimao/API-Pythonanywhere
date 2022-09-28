@@ -65,7 +65,7 @@ def nuevo_registro():
 
 # Posibilidad de reentrenar de nuevo el modelo con los posibles nuevos registros que se recojan. (/retrain)
 
-@app.route('/retrain', methods=['PUT'])
+@app.route('/retrain', methods=['GET'])
 def retrain():
 
     connection = sqlite3.connect('Advertising.db')
