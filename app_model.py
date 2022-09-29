@@ -52,10 +52,10 @@ def predict():
 
 def nuevo_registro():
     
-    TV = float(request.args["TV"])
-    radio = float(request.args["radio"])
-    newspaper = float(request.args["newspaper"])
-    sales = float(request.args["sales"])
+    TV = float(request.args.get["TV"])
+    radio = float(request.args.get["radio"])
+    newspaper = float(request.args.get["newspaper"])
+    sales = float(request.args.get["sales"])
 
     connection = sqlite3.connect('data/Advertising.db')
     cursor = connection.cursor()
