@@ -50,7 +50,7 @@ def predict():
 
 def nuevo_registro():
     
-    tv = float(request.args["tv"])
+    tv = float(request.args["TV"])
     radio = float(request.args["radio"])
     newspaper = float(request.args["newspaper"])
     sales = float(request.args["sales"])
