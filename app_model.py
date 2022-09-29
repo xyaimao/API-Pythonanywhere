@@ -46,14 +46,14 @@ def predict():
 
 # Un endpoint para almacenar nuevos registros en la base de datos que deberá estar previamente creada. (/ingest_data)
 
-@app.route('/ingest_data', methods = ['POST','GET'])
+@app.route('/ingest_data', methods = ['POST'])
 
 def nuevo_registro():
     
-    TV = float(request.args.get["TV"])
-    radio = float(request.args.get["radio"])
-    newspaper = float(request.args.get["newspaper"])
-    sales = float(request.args.get["sales"])
+    TV = float(request.args["TV"])
+    radio = float(request.args["radio"])
+    newspaper = float(request.args["newspaper"])
+    sales = float(request.args["sales"])
 
     connection = sqlite3.connect('Advertising.db')
     cursor = connection.cursor()
