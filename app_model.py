@@ -48,8 +48,6 @@ def predict():
 
 @app.route('/ingest_data', methods = ['POST'])
 
-@app.route('/ingest_data', methods = ['POST'])
-
 def nuevo_registro():
     
     TV = float(request.args.get["TV"])
