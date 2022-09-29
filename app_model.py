@@ -46,7 +46,7 @@ def predict():
 
 # Un endpoint para almacenar nuevos registros en la base de datos que deberá estar previamente creada. (/ingest_data)
 
-@app.route('/ingest_data', methods = ['POST'])
+@app.route('/ingest_data', methods = ['POST','GET'])
 
 def nuevo_registro():
     
