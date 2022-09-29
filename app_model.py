@@ -50,7 +50,7 @@ def predict():
 
 def nuevo_registro():
     
-    TV = float(request.args["TV"])
+    tv = float(request.args["tv"])
     radio = float(request.args["radio"])
     newspaper = float(request.args["newspaper"])
     sales = float(request.args["sales"])
@@ -58,10 +58,10 @@ def nuevo_registro():
     connection = sqlite3.connect('data/Advertising.db')
     cursor = connection.cursor()
     insert_data = "INSERT INTO Advertising VALUES (?,?,?,?)"
-    result = cursor.execute(insert_data, (TV,radio,newspaper,sales)).fetchall()
+    result = cursor.execute(insert_data, (tv,radio,newspaper,sales)).fetchall()
     connection.commit() 
     connection.close()
-    return ("se ha añadido nuevos datos: " + str(TV) + " " + str(radio)+ " "+ str(newspaper)+ " " + str(sales))
+    return ("se ha añadido nuevos datos: " + str(tv) + " " + str(radio)+ " "+ str(newspaper)+ " " + str(sales))
 
 # Posibilidad de reentrenar de nuevo el modelo con los posibles nuevos registros que se recojan. (/retrain)
 
