@@ -57,7 +57,7 @@ def nuevo_registro():
     newspaper = float(request.args.get["newspaper"])
     sales = float(request.args.get["sales"])
 
-    connection = sqlite3.connect('data/Advertising.db')
+    connection = sqlite3.connect('Advertising.db')
     cursor = connection.cursor()
     insert_data = "INSERT INTO Advertising VALUES (?,?,?,?)"
     result = cursor.execute(insert_data, (TV,radio,newspaper,sales)).fetchall()
